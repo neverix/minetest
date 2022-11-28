@@ -37,6 +37,9 @@ build/.cmake/
 # GNU Patch reject file
 *.rej
 
+# Python
+**/__pycache__/
+
 newworld/
 ## Non-static Minetest directories or symlinks to these
 /bin/
