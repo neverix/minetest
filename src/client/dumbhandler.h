@@ -144,22 +144,10 @@ public:
 			return;
 
 		// Parse action
-		Json::Value action;
-		Json::Reader reader;
-		bool parsingSuccess = reader.parse(actionMsg.get(0), action);
+		InputAction action;
+		bool parsingSuccess = action.ParseFromArray(actionMsg.raw_data(0), actionMsg.size(0));
 		if (!parsingSuccess)
 			return;
-
-		// zmqpp::message eventMsg;
-		// bool actionReceived = socket->receive(eventMsg);
-		// if (!actionReceived)
-		// 	return;
-
-		// // Parse action
-		// InputEvent event;
-		// bool parsingSuccess = event.ParseFromArray(eventMsg.raw_data(0), eventMsg.size(0));
-		// if (!parsingSuccess)
-		// 	return;
 
 
 		// Press keys
@@ -168,8 +156,9 @@ public:
 		u32 mouseButtonState = 0;
 		bool isGuiOpen = isMenuActive();
 
-		for (std::string keyStr : supportedKeys) {
-			bool isDown = action.get(keyStr, 0) == 1;
+		for (KeyboardEvent ev : action.keyevents()) {
+			bool isDown = ev.eventtype() == RELEASE;
+			std::string keyStr = ev.key();
 			KeyPress keyCode;
 			if (keyStr == "esc") { // manually handle ESC
 				keyCode = keycache.key[KeyType::ESC];
@@ -237,11 +226,9 @@ public:
 			}
 		}
 
-		// Move mouse
-		Json::Value mouse = action["mouse"];
 		// TODO how should we interpret the mouse action?
 		// mouse acceleration or mouse speed?
-		mousespeed = v2s32(mouse[0].asInt(), mouse[1].asInt());
+		mousespeed = v2s32(action.mousedx(), action.mousedy());
 		mousepos += mousespeed;
 
 		// if GUI was opened or closed reset mouse position to center

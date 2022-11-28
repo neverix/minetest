@@ -46,15 +46,15 @@ struct TableStruct {
 };
 void AddDescriptors();
 }  // namespace protobuf_client_2fdumb_5finputs_2eproto
-class InputEvent;
-class InputEventDefaultTypeInternal;
-extern InputEventDefaultTypeInternal _InputEvent_default_instance_;
+class InputAction;
+class InputActionDefaultTypeInternal;
+extern InputActionDefaultTypeInternal _InputAction_default_instance_;
 class KeyboardEvent;
 class KeyboardEventDefaultTypeInternal;
 extern KeyboardEventDefaultTypeInternal _KeyboardEvent_default_instance_;
 namespace google {
 namespace protobuf {
-template<> ::InputEvent* Arena::CreateMaybeMessage<::InputEvent>(Arena*);
+template<> ::InputAction* Arena::CreateMaybeMessage<::InputAction>(Arena*);
 template<> ::KeyboardEvent* Arena::CreateMaybeMessage<::KeyboardEvent>(Arena*);
 }  // namespace protobuf
 }  // namespace google
@@ -82,24 +82,24 @@ inline bool EventType_Parse(
 }
 // ===================================================================
 
-class InputEvent : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:InputEvent) */ {
+class InputAction : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:InputAction) */ {
  public:
-  InputEvent();
-  virtual ~InputEvent();
+  InputAction();
+  virtual ~InputAction();
 
-  InputEvent(const InputEvent& from);
+  InputAction(const InputAction& from);
 
-  inline InputEvent& operator=(const InputEvent& from) {
+  inline InputAction& operator=(const InputAction& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  InputEvent(InputEvent&& from) noexcept
-    : InputEvent() {
+  InputAction(InputAction&& from) noexcept
+    : InputAction() {
     *this = ::std::move(from);
   }
 
-  inline InputEvent& operator=(InputEvent&& from) noexcept {
+  inline InputAction& operator=(InputAction&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -109,34 +109,34 @@ class InputEvent : public ::google::protobuf::Message /* @@protoc_insertion_poin
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const InputEvent& default_instance();
+  static const InputAction& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const InputEvent* internal_default_instance() {
-    return reinterpret_cast<const InputEvent*>(
-               &_InputEvent_default_instance_);
+  static inline const InputAction* internal_default_instance() {
+    return reinterpret_cast<const InputAction*>(
+               &_InputAction_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(InputEvent* other);
-  friend void swap(InputEvent& a, InputEvent& b) {
+  void Swap(InputAction* other);
+  friend void swap(InputAction& a, InputAction& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline InputEvent* New() const final {
-    return CreateMaybeMessage<InputEvent>(NULL);
+  inline InputAction* New() const final {
+    return CreateMaybeMessage<InputAction>(NULL);
   }
 
-  InputEvent* New(::google::protobuf::Arena* arena) const final {
-    return CreateMaybeMessage<InputEvent>(arena);
+  InputAction* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<InputAction>(arena);
   }
   void CopyFrom(const ::google::protobuf::Message& from) final;
   void MergeFrom(const ::google::protobuf::Message& from) final;
-  void CopyFrom(const InputEvent& from);
-  void MergeFrom(const InputEvent& from);
+  void CopyFrom(const InputAction& from);
+  void MergeFrom(const InputAction& from);
   void Clear() final;
   bool IsInitialized() const final;
 
@@ -153,7 +153,7 @@ class InputEvent : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(InputEvent* other);
+  void InternalSwap(InputAction* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -193,7 +193,7 @@ class InputEvent : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::int32 mousedy() const;
   void set_mousedy(::google::protobuf::int32 value);
 
-  // @@protoc_insertion_point(class_scope:InputEvent)
+  // @@protoc_insertion_point(class_scope:InputAction)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -330,64 +330,64 @@ class KeyboardEvent : public ::google::protobuf::Message /* @@protoc_insertion_p
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// InputEvent
+// InputAction
 
 // repeated .KeyboardEvent keyEvents = 1;
-inline int InputEvent::keyevents_size() const {
+inline int InputAction::keyevents_size() const {
   return keyevents_.size();
 }
-inline void InputEvent::clear_keyevents() {
+inline void InputAction::clear_keyevents() {
   keyevents_.Clear();
 }
-inline ::KeyboardEvent* InputEvent::mutable_keyevents(int index) {
-  // @@protoc_insertion_point(field_mutable:InputEvent.keyEvents)
+inline ::KeyboardEvent* InputAction::mutable_keyevents(int index) {
+  // @@protoc_insertion_point(field_mutable:InputAction.keyEvents)
   return keyevents_.Mutable(index);
 }
 inline ::google::protobuf::RepeatedPtrField< ::KeyboardEvent >*
-InputEvent::mutable_keyevents() {
-  // @@protoc_insertion_point(field_mutable_list:InputEvent.keyEvents)
+InputAction::mutable_keyevents() {
+  // @@protoc_insertion_point(field_mutable_list:InputAction.keyEvents)
   return &keyevents_;
 }
-inline const ::KeyboardEvent& InputEvent::keyevents(int index) const {
-  // @@protoc_insertion_point(field_get:InputEvent.keyEvents)
+inline const ::KeyboardEvent& InputAction::keyevents(int index) const {
+  // @@protoc_insertion_point(field_get:InputAction.keyEvents)
   return keyevents_.Get(index);
 }
-inline ::KeyboardEvent* InputEvent::add_keyevents() {
-  // @@protoc_insertion_point(field_add:InputEvent.keyEvents)
+inline ::KeyboardEvent* InputAction::add_keyevents() {
+  // @@protoc_insertion_point(field_add:InputAction.keyEvents)
   return keyevents_.Add();
 }
 inline const ::google::protobuf::RepeatedPtrField< ::KeyboardEvent >&
-InputEvent::keyevents() const {
-  // @@protoc_insertion_point(field_list:InputEvent.keyEvents)
+InputAction::keyevents() const {
+  // @@protoc_insertion_point(field_list:InputAction.keyEvents)
   return keyevents_;
 }
 
 // sint32 mouseDx = 2;
-inline void InputEvent::clear_mousedx() {
+inline void InputAction::clear_mousedx() {
   mousedx_ = 0;
 }
-inline ::google::protobuf::int32 InputEvent::mousedx() const {
-  // @@protoc_insertion_point(field_get:InputEvent.mouseDx)
+inline ::google::protobuf::int32 InputAction::mousedx() const {
+  // @@protoc_insertion_point(field_get:InputAction.mouseDx)
   return mousedx_;
 }
-inline void InputEvent::set_mousedx(::google::protobuf::int32 value) {
+inline void InputAction::set_mousedx(::google::protobuf::int32 value) {
   
   mousedx_ = value;
-  // @@protoc_insertion_point(field_set:InputEvent.mouseDx)
+  // @@protoc_insertion_point(field_set:InputAction.mouseDx)
 }
 
 // sint32 mouseDy = 3;
-inline void InputEvent::clear_mousedy() {
+inline void InputAction::clear_mousedy() {
   mousedy_ = 0;
 }
-inline ::google::protobuf::int32 InputEvent::mousedy() const {
-  // @@protoc_insertion_point(field_get:InputEvent.mouseDy)
+inline ::google::protobuf::int32 InputAction::mousedy() const {
+  // @@protoc_insertion_point(field_get:InputAction.mouseDy)
   return mousedy_;
 }
-inline void InputEvent::set_mousedy(::google::protobuf::int32 value) {
+inline void InputAction::set_mousedy(::google::protobuf::int32 value) {
   
   mousedy_ = value;
-  // @@protoc_insertion_point(field_set:InputEvent.mouseDy)
+  // @@protoc_insertion_point(field_set:InputAction.mouseDy)
 }
 
 // -------------------------------------------------------------------

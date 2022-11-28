@@ -22,30 +22,30 @@
 namespace protobuf_client_2fdumb_5finputs_2eproto {
 extern PROTOBUF_INTERNAL_EXPORT_protobuf_client_2fdumb_5finputs_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_KeyboardEvent;
 }  // namespace protobuf_client_2fdumb_5finputs_2eproto
-class InputEventDefaultTypeInternal {
+class InputActionDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<InputEvent>
+  ::google::protobuf::internal::ExplicitlyConstructed<InputAction>
       _instance;
-} _InputEvent_default_instance_;
+} _InputAction_default_instance_;
 class KeyboardEventDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<KeyboardEvent>
       _instance;
 } _KeyboardEvent_default_instance_;
 namespace protobuf_client_2fdumb_5finputs_2eproto {
-static void InitDefaultsInputEvent() {
+static void InitDefaultsInputAction() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::_InputEvent_default_instance_;
-    new (ptr) ::InputEvent();
+    void* ptr = &::_InputAction_default_instance_;
+    new (ptr) ::InputAction();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::InputEvent::InitAsDefaultInstance();
+  ::InputAction::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_InputEvent =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsInputEvent}, {
+::google::protobuf::internal::SCCInfo<1> scc_info_InputAction =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsInputAction}, {
       &protobuf_client_2fdumb_5finputs_2eproto::scc_info_KeyboardEvent.base,}};
 
 static void InitDefaultsKeyboardEvent() {
@@ -63,7 +63,7 @@ static void InitDefaultsKeyboardEvent() {
     {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsKeyboardEvent}, {}};
 
 void InitDefaults() {
-  ::google::protobuf::internal::InitSCC(&scc_info_InputEvent.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_InputAction.base);
   ::google::protobuf::internal::InitSCC(&scc_info_KeyboardEvent.base);
 }
 
@@ -72,13 +72,13 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputEvent, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputAction, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputEvent, keyevents_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputEvent, mousedx_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputEvent, mousedy_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputAction, keyevents_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputAction, mousedx_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::InputAction, mousedy_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::KeyboardEvent, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -88,12 +88,12 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::KeyboardEvent, eventtype_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::InputEvent)},
+  { 0, -1, sizeof(::InputAction)},
   { 8, -1, sizeof(::KeyboardEvent)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::_InputEvent_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::_InputAction_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::_KeyboardEvent_default_instance_),
 };
 
@@ -118,15 +118,15 @@ void protobuf_RegisterTypes(const ::std::string&) {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\030client/dumb_inputs.proto\"Q\n\nInputEvent"
-      "\022!\n\tkeyEvents\030\001 \003(\0132\016.KeyboardEvent\022\017\n\007m"
-      "ouseDx\030\002 \001(\021\022\017\n\007mouseDy\030\003 \001(\021\";\n\rKeyboar"
-      "dEvent\022\013\n\003key\030\001 \001(\t\022\035\n\teventType\030\002 \001(\0162\n"
-      ".EventType*#\n\tEventType\022\t\n\005PRESS\020\000\022\013\n\007RE"
-      "LEASE\020\001b\006proto3"
+      "\n\030client/dumb_inputs.proto\"R\n\013InputActio"
+      "n\022!\n\tkeyEvents\030\001 \003(\0132\016.KeyboardEvent\022\017\n\007"
+      "mouseDx\030\002 \001(\021\022\017\n\007mouseDy\030\003 \001(\021\";\n\rKeyboa"
+      "rdEvent\022\013\n\003key\030\001 \001(\t\022\035\n\teventType\030\002 \001(\0162"
+      "\n.EventType*#\n\tEventType\022\t\n\005PRESS\020\000\022\013\n\007R"
+      "ELEASE\020\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 215);
+      descriptor, 216);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "client/dumb_inputs.proto", &protobuf_RegisterTypes);
 }
@@ -159,22 +159,22 @@ bool EventType_IsValid(int value) {
 
 // ===================================================================
 
-void InputEvent::InitAsDefaultInstance() {
+void InputAction::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int InputEvent::kKeyEventsFieldNumber;
-const int InputEvent::kMouseDxFieldNumber;
-const int InputEvent::kMouseDyFieldNumber;
+const int InputAction::kKeyEventsFieldNumber;
+const int InputAction::kMouseDxFieldNumber;
+const int InputAction::kMouseDyFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-InputEvent::InputEvent()
+InputAction::InputAction()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   ::google::protobuf::internal::InitSCC(
-      &protobuf_client_2fdumb_5finputs_2eproto::scc_info_InputEvent.base);
+      &protobuf_client_2fdumb_5finputs_2eproto::scc_info_InputAction.base);
   SharedCtor();
-  // @@protoc_insertion_point(constructor:InputEvent)
+  // @@protoc_insertion_point(constructor:InputAction)
 }
-InputEvent::InputEvent(const InputEvent& from)
+InputAction::InputAction(const InputAction& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       keyevents_(from.keyevents_) {
@@ -182,39 +182,39 @@ InputEvent::InputEvent(const InputEvent& from)
   ::memcpy(&mousedx_, &from.mousedx_,
     static_cast<size_t>(reinterpret_cast<char*>(&mousedy_) -
     reinterpret_cast<char*>(&mousedx_)) + sizeof(mousedy_));
-  // @@protoc_insertion_point(copy_constructor:InputEvent)
+  // @@protoc_insertion_point(copy_constructor:InputAction)
 }
 
-void InputEvent::SharedCtor() {
+void InputAction::SharedCtor() {
   ::memset(&mousedx_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&mousedy_) -
       reinterpret_cast<char*>(&mousedx_)) + sizeof(mousedy_));
 }
 
-InputEvent::~InputEvent() {
-  // @@protoc_insertion_point(destructor:InputEvent)
+InputAction::~InputAction() {
+  // @@protoc_insertion_point(destructor:InputAction)
   SharedDtor();
 }
 
-void InputEvent::SharedDtor() {
+void InputAction::SharedDtor() {
 }
 
-void InputEvent::SetCachedSize(int size) const {
+void InputAction::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ::google::protobuf::Descriptor* InputEvent::descriptor() {
+const ::google::protobuf::Descriptor* InputAction::descriptor() {
   ::protobuf_client_2fdumb_5finputs_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_client_2fdumb_5finputs_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const InputEvent& InputEvent::default_instance() {
-  ::google::protobuf::internal::InitSCC(&protobuf_client_2fdumb_5finputs_2eproto::scc_info_InputEvent.base);
+const InputAction& InputAction::default_instance() {
+  ::google::protobuf::internal::InitSCC(&protobuf_client_2fdumb_5finputs_2eproto::scc_info_InputAction.base);
   return *internal_default_instance();
 }
 
 
-void InputEvent::Clear() {
-// @@protoc_insertion_point(message_clear_start:InputEvent)
+void InputAction::Clear() {
+// @@protoc_insertion_point(message_clear_start:InputAction)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -226,11 +226,11 @@ void InputEvent::Clear() {
   _internal_metadata_.Clear();
 }
 
-bool InputEvent::MergePartialFromCodedStream(
+bool InputAction::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:InputEvent)
+  // @@protoc_insertion_point(parse_start:InputAction)
   for (;;) {
     ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -288,17 +288,17 @@ bool InputEvent::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:InputEvent)
+  // @@protoc_insertion_point(parse_success:InputAction)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:InputEvent)
+  // @@protoc_insertion_point(parse_failure:InputAction)
   return false;
 #undef DO_
 }
 
-void InputEvent::SerializeWithCachedSizes(
+void InputAction::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:InputEvent)
+  // @@protoc_insertion_point(serialize_start:InputAction)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -325,13 +325,13 @@ void InputEvent::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:InputEvent)
+  // @@protoc_insertion_point(serialize_end:InputAction)
 }
 
-::google::protobuf::uint8* InputEvent::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* InputAction::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:InputEvent)
+  // @@protoc_insertion_point(serialize_to_array_start:InputAction)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -357,12 +357,12 @@ void InputEvent::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:InputEvent)
+  // @@protoc_insertion_point(serialize_to_array_end:InputAction)
   return target;
 }
 
-size_t InputEvent::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:InputEvent)
+size_t InputAction::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:InputAction)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -400,23 +400,23 @@ size_t InputEvent::ByteSizeLong() const {
   return total_size;
 }
 
-void InputEvent::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:InputEvent)
+void InputAction::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:InputAction)
   GOOGLE_DCHECK_NE(&from, this);
-  const InputEvent* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const InputEvent>(
+  const InputAction* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const InputAction>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:InputEvent)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:InputAction)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:InputEvent)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:InputAction)
     MergeFrom(*source);
   }
 }
 
-void InputEvent::MergeFrom(const InputEvent& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:InputEvent)
+void InputAction::MergeFrom(const InputAction& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:InputAction)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -431,29 +431,29 @@ void InputEvent::MergeFrom(const InputEvent& from) {
   }
 }
 
-void InputEvent::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:InputEvent)
+void InputAction::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:InputAction)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void InputEvent::CopyFrom(const InputEvent& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:InputEvent)
+void InputAction::CopyFrom(const InputAction& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:InputAction)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool InputEvent::IsInitialized() const {
+bool InputAction::IsInitialized() const {
   return true;
 }
 
-void InputEvent::Swap(InputEvent* other) {
+void InputAction::Swap(InputAction* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void InputEvent::InternalSwap(InputEvent* other) {
+void InputAction::InternalSwap(InputAction* other) {
   using std::swap;
   CastToBase(&keyevents_)->InternalSwap(CastToBase(&other->keyevents_));
   swap(mousedx_, other->mousedx_);
@@ -461,7 +461,7 @@ void InputEvent::InternalSwap(InputEvent* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
 }
 
-::google::protobuf::Metadata InputEvent::GetMetadata() const {
+::google::protobuf::Metadata InputAction::GetMetadata() const {
   protobuf_client_2fdumb_5finputs_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_client_2fdumb_5finputs_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -753,8 +753,8 @@ void KeyboardEvent::InternalSwap(KeyboardEvent* other) {
 // @@protoc_insertion_point(namespace_scope)
 namespace google {
 namespace protobuf {
-template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::InputEvent* Arena::CreateMaybeMessage< ::InputEvent >(Arena* arena) {
-  return Arena::CreateInternal< ::InputEvent >(arena);
+template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::InputAction* Arena::CreateMaybeMessage< ::InputAction >(Arena* arena) {
+  return Arena::CreateInternal< ::InputAction >(arena);
 }
 template<> GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::KeyboardEvent* Arena::CreateMaybeMessage< ::KeyboardEvent >(Arena* arena) {
   return Arena::CreateInternal< ::KeyboardEvent >(arena);
